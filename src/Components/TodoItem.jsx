@@ -2,16 +2,13 @@ import { useEffect, useState } from "react";
 import style from "./TodoItem.module.css";
 function TodoItem({ name, date, deleteEle }) {
 
-      const [isChecked, setIsChecked] = useState(JSON.parse(localStorage.getItem(`isChecked${name}`)) || false);
-        
-          // Update local storage whenever isChecked changes
-          useEffect(() => {
-            localStorage.setItem(`isChecked${name}`, JSON.stringify(isChecked));
-          }, [isChecked]);
+      const [isChecked, setIsChecked] = useState(JSON.parse(localStorage.getItem(`isChecked`)) || false);
+
         
           // Function to handle checkbox toggle
           const handleCheckboxChange = () => {
-            setIsChecked(!isChecked); // Toggle the isChecked state
+            // Toggle the isChecked state
+            setIsChecked(!isChecked); 
           };
       
 
