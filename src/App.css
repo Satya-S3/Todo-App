@@ -1,0 +1,14 @@
+.box{
+      background-color: rgba(53, 124, 238, 0.17);
+}
+.notext{
+      background-color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.433);
+      margin-top: 100px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      letter-spacing: 6px;
+      
+      h1{
+            font-size: 50px;
+      }
+}
