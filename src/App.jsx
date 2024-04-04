@@ -5,6 +5,7 @@ import TodoItems from './Components/TodoItems';
 import EmptyList from './Components/EmptyList';
 import { useDispatch, useSelector } from 'react-redux';
 import { itemsActions } from './store/itemSlice';
+import { useEffect } from 'react';
 
 
 //Initialize the Previous ToDo Item after refersh
@@ -22,9 +23,9 @@ function App() {
   const dispatch = useDispatch();
 
   //Storing the Todo list in localstorage
-  // useEffect(() => {
-  //   localStorage.setItem('currItems', JSON.stringify(items))
-  // }, [items])
+  useEffect(() => {
+    localStorage.setItem('currItems', JSON.stringify(items))
+  }, [items])
 
   //Updating Todo list from FORM data
   const getDetails = (setname, setdate) => {

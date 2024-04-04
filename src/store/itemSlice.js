@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+      const data=JSON.parse(localStorage.getItem('currItems')) || [];
+      
 const itemsSlice=createSlice({
       name:"items",
-      initialState:[],
+      initialState:data,
       reducers:{
             //to add item to store
             addtodo:(state,action)=>{
